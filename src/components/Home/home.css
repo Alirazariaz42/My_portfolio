@@ -1,0 +1,75 @@
+.title1 {
+  font-size: 4.5rem;
+  color: #c83eff;
+  text-align: center;
+  margin-top: 20px;
+  margin: 0;
+  line-height: 75px;
+  font-weight: 900;
+  background: linear-gradient(45deg, #00d0ff, #00a2ff, #c83eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 170, 0.3));
+  /* text-shadow: 0 0 5px rgba(0, 255, 247, 0.5), 0 0 10px rgba(180, 0, 251, 0.3), ; */
+}
+.title2 {
+  font-size: 3.6rem;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 0px;
+  line-height: 75px;
+  margin: 0;
+  margin-left: 120px;
+  font-weight: 700;
+  filter: drop-shadow(0 0 4px rgba(0, 255, 170, 0.3));
+  text-shadow: 0 0 6px rgba(92, 103, 255, 0.7), 0 0 8px rgba(0, 153, 255, 0.5);
+}
+.intro-text {
+  margin: 0px;
+  padding: 20px;
+  color: white;
+  margin-top: 20px;
+  font-weight: 500 !important;
+}
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+.outlined-text {
+  color: white;
+  -webkit-text-stroke: 1px black; /* Outline thickness and color */
+}
+
+@media screen and (max-width: 1200px) {
+  .title1 {
+    font-size: 3.4rem;
+  }
+  .title2 {
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .title1 {
+    font-size: 3.2rem;
+  }
+  .title2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title1 {
+    font-size: 2.2rem;
+  }
+  .title2 {
+    font-size: 1.8rem;
+    margin-left: 10px;
+  }
+}

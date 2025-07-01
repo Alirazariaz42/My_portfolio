@@ -1,0 +1,12 @@
+.squares-canvas {
+  width: 300px;
+  height: 170px;
+  border-radius: 15px;
+  border: none;
+  display: block;
+
+  background: linear-gradient(70deg, #00f2ffd4, #00a2ff, #7b57fe);
+  opacity: 01;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 170, 0.3));
+  text-shadow: 0 0 5px rgba(92, 103, 255, 0.5), 0 0 10px rgba(92, 103, 255, 0.3);
+}
