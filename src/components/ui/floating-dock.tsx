@@ -1,8 +1,8 @@
 
 
-import { cn } from "../../lib/utilsnav.ts";
 import { IconLayoutNavbarCollapse } from "@tabler/icons-react";
 import { AnimatePresence, motion, useMotionValue, useSpring, useTransform } from "motion/react";
+import { cn } from "../../lib/utilsnav.ts";
 
 import { useRef, useState } from "react";
 import { Link } from "react-router-dom";
@@ -78,7 +78,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-neutral-900",
+        "mx-auto hidden h-16 items-end gap-4 rounded-2xl !border-x-2  !border-sky-600 px-3 pb-3 md:flex bg-black   ", 
         className
       )}>
       {items.map((item) => (
@@ -142,7 +142,10 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800">
+        className="relative flex aspect-square items-center justify-center !border-y-2 !border-yellow-400
+rounded-full bg-gradient-to-br 
+from-[rgba(190,59,246,0.3)] via-[rgba(37,99,235,0.2)] to-[rgba(142,41,236,0.3)]
+">
         <AnimatePresence>
           {hovered && (
             <motion.div

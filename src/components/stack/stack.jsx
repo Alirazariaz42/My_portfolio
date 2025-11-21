@@ -1,4 +1,3 @@
-import React from "react";
 import "./stack.css";
 export const Stack = (props) => {
   return (

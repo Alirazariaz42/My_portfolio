@@ -1,280 +1,458 @@
-import React from "react";
-import CountUp from "react-countup";
 import "./home.css";
 // import { AnimatedBorderCard } from "";
-import { AnimatedBorderCard } from "../../animatedbordercard";
-import TrueFocus from "../textanimation/TrueFocus ";
-import RotatingText from "../textanimation/creativetext";
-import { CompareDemo } from "../../comparecard";
-import Squares from "../squareBG/squareBG";
-import BlurText from "../textanimation/buildKeyframes";
-import { Stack } from "../stack/stack";
-import { text } from "framer-motion/client";
 import { TracingBeamDemo } from "../../trackingBeams";
-import { Card } from "../../poitfolioCard/card";
-import project from "../../images/portfolio.png";
-import SplitText from "../textanimation/splittext";
-import { Link } from "react-router-dom";
+import TrueFocus from "../textanimation/TrueFocus ";
+import BlurText from "../textanimation/buildKeyframes";
+import RotatingText from "../textanimation/creativetext";
 export const Home = () => {
   const handleAnimationComplete = () => {
-    console.log("Animation completed!");
+    // console.log("Animation completed!");
   };
 
   return (
     <>
-      <div className=" container-lg">
+      <div className=" container-lg p-lg-0">
         {" "}
-        <div className="  flex  justify-evenly  flex-wrap  mt-7   ">
-          <div data-aos="fade-up-right" className=" lg:w3/2 xl:w-1/2 ">
-            <p className=" title1 anton-regular  "> FRONTEND</p>
-            <p className=" title2 anton-regular "> DEVELOPER</p>
-            <p className=" intro-text anton-regular italic  relative z-[1]">
-              <span className=" fs-3  italic"> Hi! 👋 I'm .</span>
+        <div className="  flex  justify-between  flex-wrap  mt-4   ">
+          <div className="  xl:w-1/2 ">
+            <p data-aos="fade-right" className=" title1_main anton-regular  ">
+              {" "}
+              MERN STACK
+            </p>
+            <p
+              data-aos="fade-left"
+              data-aos-delay="300"
+              className=" title2 dancing-script  "
+            >
+              {" "}
+              <i>DEVELOPER</i>
+            </p>
+            <p
+              data-aos="fade-right"
+              data-aos-delay="500"
+              className=" intro-text anton-regular italic  relative z-[1]"
+            >
+              <span className=" fs-4  italic"> Hi! 👋 I'm .</span>
               <TrueFocus
                 sentence="ALI RAZA"
                 manualMode={false}
                 blurAmount={5}
-                borderColor="#FFC83D"
+                borderColor="#fc4c00"
                 animationDuration={0.5}
                 pauseBetweenAnimations={2}
               />
               <br />
               <span className=" ">
                 <BlurText
-                  text="  A creative Frontend Developer with 5+ years of experience in
-                building high-performance, scalable, and responsive web
-                solutions."
-                  delay={150}
+                  text="Web Developer with 4+ years of experience in creating responsive, user-focused applications using React.js and the MERN stack. I specialize in building modern interfaces, scalable backend systems, and seamless digital experiences powered by clean code and strong problem-solving skills."
+                  delay={50}
                   animateBy="words"
                   direction="top"
                   onAnimationComplete={handleAnimationComplete}
-                  className="fs-4  italic mb-8 text-lime-50"
+                  className="fs-5  italic mb-2 text-lime-50"
                 />
               </span>
             </p>
-            <br />
-            <br />
+
             <div className=" flex items-center relative z-[1]">
-              <span className=" fs-2 italic  text-teal-50 me-3"> Creative</span>
-              <RotatingText
-                texts={["Thinking", "Coding", "Components", "Mind!"]}
-                mainClassName="px-2 fw-bold fs-1 sm:px-2 md:px-3 bg-cyan-300  text-white outlined-text overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-                staggerFrom={"last"}
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "-120%" }}
-                staggerDuration={0.025}
-                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-                transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                rotationInterval={2000}
-              />
-            </div>
-          </div>
-          <div className="" data-aos="fade-up-left">
-            <CompareDemo />
-          </div>
-        </div>
-        <br />
-        <br />
-        <div>
-          <div className="flex justify-between   align-items-center flex-wrap-reverse  ">
-            <div
-              data-aos="fade-right"
-              className=" w-full  xl:w-1/3  md:gap-10 gap-7 flex xl:flex-col justify-evenly  flex-wrap   mt-9   "
-            >
-              <div className=" relative ">
-                <Squares
-                  speed={0.5}
-                  squareSize={30}
-                  direction="diagonal" // up, down, left, right, diagonal
-                  borderColor="#3A83F9"
-                  hoverFillColor="#222"
-                />
-
-                <div class="absolute w-[300px]  inset-0 flex items-center justify-center">
-                  <div class=" text-white px-3 py-2 rounded">
-                    <p className=" flex  items-center m-0">
-                      <span className="fs-4 fw-bolder uppercase  outlined-text font-bold">
-                        {" "}
-                        Experience:&nbsp;
-                      </span>{" "}
-                      <CountUp
-                        className="  text-6xl outlined-text font-bold "
-                        start={0}
-                        end={5}
-                        duration={2.75}
-                      />{" "}
-                      <span className=" text-2xl  outlined-text font-bold ">
-                        {" "}
-                        +
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className=" relative ">
-                <Squares
-                  speed={0.5}
-                  squareSize={30}
-                  direction="diagonal" // up, down, left, right, diagonal
-                  borderColor="#3A83F9"
-                  hoverFillColor="#222"
-                />
-
-                <div class="absolute w-[300px] inset-0 flex items-center justify-center">
-                  <div class=" text-white px-3 py-2 rounded">
-                    <p className=" flex  items-center m-0 m-0">
-                      <span className="fs-4 fw-bolder uppercase  outlined-text font-bold">
-                        {" "}
-                        Projects:&nbsp;
-                      </span>{" "}
-                      <CountUp
-                        className="  text-6xl outlined-text font-bold "
-                        start={0}
-                        end={30}
-                        duration={2.75}
-                      />{" "}
-                      <span className=" text-2xl  outlined-text font-bold ">
-                        {" "}
-                        +
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className=" relative ">
-                <Squares
-                  speed={0.5}
-                  squareSize={30}
-                  direction="diagonal" // up, down, left, right, diagonal
-                  borderColor="#3A83F9"
-                  hoverFillColor="#222"
-                />
-
-                <div class="absolute w-[300px]  inset-0 flex items-center justify-center">
-                  <div class=" text-white px-3 py-2 rounded">
-                    <p className=" flex  items-center m-0 m-0">
-                      <span className="fs-4 fw-bolder uppercase  outlined-text font-bold">
-                        {" "}
-                        Clients:&nbsp;
-                      </span>{" "}
-                      <CountUp
-                        className="  text-6xl outlined-text font-bold "
-                        start={0}
-                        end={20}
-                        duration={2.75}
-                      />{" "}
-                      <span className=" text-2xl  outlined-text font-bold ">
-                        {" "}
-                        +
-                      </span>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              data-aos="fade-left"
-              className="  w-full xl:w-2/3  mt-7  relative"
-            >
-              <p className=" title1 anton-regular     text-lime-50 text-center  mb-7  uppercase ">
+              <span
+                data-aos="fade-right"
+                data-aos-delay="700"
+                className=" fs-3 italic  text-teal-50 me-3"
+              >
                 {" "}
-                About Me.
-              </p>{" "}
-              <br />
-              <BlurText
-                text="I have been coding for over 5 years, beginning my journey in 2020. Initially, I learned HTML, CSS, and JavaScript to build websites.
-                My first project was a simple website built with HTML, CSS, and JavaScript (~mid-2020).
-                As I progressed, I focused heavily on React.js and Next.js. Now, I specialize in building full stack applications with modern web technologies.  I specialize in MongoDB, Express.js, React.js, and Node.js, and have a strong command of front-end technologies like HTML, CSS, JavaScript, Tailwind CSS, Bootstrap, material UI, reactBits, chakra UI, shadcn UI, and Framer Motion. I love turning complex problems into clean, efficient code and crafting smooth user experiences. My journey began with a deep interest in how websites work, and over the years, I’ve transformed that curiosity into a career. I'm constantly learning and exploring new tools and technologies to stay current in this fast-evolving field."
-                delay={150}
-                animateBy="words"
-                direction="top"
-                onAnimationComplete={handleAnimationComplete}
-                className=" sm:text-2xl text-xl p-3  italic mb-8 text-lime-50"
+                Creative
+              </span>
+              <div data-aos="fade-left" data-aos-delay="900">
+                <RotatingText
+                  texts={["Thinking!", "Coding!", "Ideas!", "Mind!"]}
+                  mainClassName="px-2 fw-bold fs-3 sm:px-2 md:px-3 bg-cyan-300  text-white outlined-text overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                  staggerFrom={"last"}
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "-120%" }}
+                  staggerDuration={0.025}
+                  splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                  transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                  rotationInterval={2000}
+                />
+              </div>
+            </div>
+          </div>
+          <div className="  xl:w-1/2 ">
+            <div className=" relative">
+              <img
+                src={require("../../images/Adobe Express - file.png")}
+                alt=""
               />
             </div>
           </div>
         </div>
+        <div>
+          {" "}
+          <div data-aos="fade-left" data-aos-delay="800">
+            {" "}
+            <a
+              href="https://wa.me/923152490017?text=Hi%20I%20want%20to%20talk%20about%20a%20project"
+              target="_blank"
+              className=" no-underline"
+            >
+              <div
+                className=" relative  md:p-3 sm:p-2 bg-gray-900/30  rounded-2xl  !border !border-blue-700/50  transform hover:scale-105
+    hover:bg-blue-900/20 transition-all duration-500 ease-in-out"
+              >
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="400"
+                  className=" flex gap-4 align-center justify-center align-items-center"
+                >
+                  <div
+                    className="p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60"
+                    style={{ transform: "none" }}
+                  >
+                    <svg
+                      width="36px"
+                      height="36px"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
+                          fill="#BFC8D0"
+                        ></path>{" "}
+                        <path
+                          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
+                          fill="url(#paint0_linear_87_7264)"
+                        ></path>{" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
+                          fill="white"
+                        ></path>{" "}
+                        <path
+                          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
+                          fill="white"
+                        ></path>{" "}
+                        <defs>
+                          {" "}
+                          <linearGradient
+                            id="paint0_linear_87_7264"
+                            x1="26.5"
+                            y1="7"
+                            x2="4"
+                            y2="28"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            {" "}
+                            <stop stop-color="#5BD066"></stop>{" "}
+                            <stop offset="1" stop-color="#27B43E"></stop>{" "}
+                          </linearGradient>{" "}
+                        </defs>{" "}
+                      </g>
+                    </svg>
+                  </div>
+                  <p className=" title3 anton-regular text-lime-50 text-center  mb-7  uppercase ">
+                    {" "}
+                    Download Resume
+                  </p>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="900"
+                  className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <br />
+          <div data-aos="fade-left" data-aos-delay="1600">
+            {" "}
+            <a
+              href="https://wa.me/923152490017?text=Hi%20I%20want%20to%20talk%20about%20a%20project"
+              target="_blank"
+              className=" no-underline"
+            >
+              <div
+                className=" relative  md:p-3 sm:p-2 bg-gray-900/30  rounded-2xl  !border !border-blue-700/50  transform hover:scale-105
+    hover:bg-blue-900/20 transition-all duration-500 ease-in-out"
+              >
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="400"
+                  className=" flex gap-4 align-center justify-center align-items-center"
+                >
+                  <div
+                    className="p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60"
+                    style={{ transform: "none" }}
+                  >
+                    <svg
+                      width="36px"
+                      height="36px"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
+                          fill="#BFC8D0"
+                        ></path>{" "}
+                        <path
+                          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
+                          fill="url(#paint0_linear_87_7264)"
+                        ></path>{" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
+                          fill="white"
+                        ></path>{" "}
+                        <path
+                          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
+                          fill="white"
+                        ></path>{" "}
+                        <defs>
+                          {" "}
+                          <linearGradient
+                            id="paint0_linear_87_7264"
+                            x1="26.5"
+                            y1="7"
+                            x2="4"
+                            y2="28"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            {" "}
+                            <stop stop-color="#5BD066"></stop>{" "}
+                            <stop offset="1" stop-color="#27B43E"></stop>{" "}
+                          </linearGradient>{" "}
+                        </defs>{" "}
+                      </g>
+                    </svg>
+                  </div>
+                  <p className=" title3 anton-regular text-lime-50 text-center  mb-7  uppercase ">
+                    {" "}
+                    +923152490017
+                  </p>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="900"
+                  className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <br />
+          <div data-aos="fade-left" data-aos-delay="2400">
+            {" "}
+            <a
+              href="https://wa.me/923152490017?text=Hi%20I%20want%20to%20talk%20about%20a%20project"
+              target="_blank"
+              className=" no-underline"
+            >
+              <div
+                className=" relative  md:p-3 sm:p-2 bg-gray-900/30  rounded-2xl  !border !border-blue-700/50  transform hover:scale-105
+    hover:bg-blue-900/20 transition-all duration-500 ease-in-out"
+              >
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="400"
+                  className=" flex gap-4 align-center justify-center align-items-center"
+                >
+                  <div
+                    className="p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60"
+                    style={{ transform: "none" }}
+                  >
+                    <svg
+                      width="36px"
+                      height="36px"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
+                          fill="#BFC8D0"
+                        ></path>{" "}
+                        <path
+                          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
+                          fill="url(#paint0_linear_87_7264)"
+                        ></path>{" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
+                          fill="white"
+                        ></path>{" "}
+                        <path
+                          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
+                          fill="white"
+                        ></path>{" "}
+                        <defs>
+                          {" "}
+                          <linearGradient
+                            id="paint0_linear_87_7264"
+                            x1="26.5"
+                            y1="7"
+                            x2="4"
+                            y2="28"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            {" "}
+                            <stop stop-color="#5BD066"></stop>{" "}
+                            <stop offset="1" stop-color="#27B43E"></stop>{" "}
+                          </linearGradient>{" "}
+                        </defs>{" "}
+                      </g>
+                    </svg>
+                  </div>
+                  <p className=" title3 anton-regular text-lime-50 text-center  mb-7  uppercase ">
+                    {" "}
+                    +923152490017
+                  </p>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="900"
+                  className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
+                ></div>
+              </div>
+            </a>
+          </div>
+          <br />
+          <div data-aos="fade-left" data-aos-delay="3000">
+            {" "}
+            <a
+              href="https://wa.me/923152490017?text=Hi%20I%20want%20to%20talk%20about%20a%20project"
+              target="_blank"
+              className=" no-underline"
+            >
+              <div
+                className=" relative  md:p-3 sm:p-2 bg-gray-900/30  rounded-2xl  !border !border-blue-700/50  transform hover:scale-105
+    hover:bg-blue-900/20 transition-all duration-500 ease-in-out"
+              >
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="400"
+                  className=" flex gap-4 align-center justify-center align-items-center"
+                >
+                  <div
+                    className="p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60"
+                    style={{ transform: "none" }}
+                  >
+                    <svg
+                      width="36px"
+                      height="36px"
+                      viewBox="0 0 32 32"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                      <g
+                        id="SVGRepo_tracerCarrier"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></g>
+                      <g id="SVGRepo_iconCarrier">
+                        {" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
+                          fill="#BFC8D0"
+                        ></path>{" "}
+                        <path
+                          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
+                          fill="url(#paint0_linear_87_7264)"
+                        ></path>{" "}
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
+                          fill="white"
+                        ></path>{" "}
+                        <path
+                          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
+                          fill="white"
+                        ></path>{" "}
+                        <defs>
+                          {" "}
+                          <linearGradient
+                            id="paint0_linear_87_7264"
+                            x1="26.5"
+                            y1="7"
+                            x2="4"
+                            y2="28"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            {" "}
+                            <stop stop-color="#5BD066"></stop>{" "}
+                            <stop offset="1" stop-color="#27B43E"></stop>{" "}
+                          </linearGradient>{" "}
+                        </defs>{" "}
+                      </g>
+                    </svg>
+                  </div>
+                  <p className=" title3 anton-regular text-lime-50 text-center  mb-7  uppercase ">
+                    {" "}
+                    +923152490017
+                  </p>
+                </div>
+                <div
+                  data-aos="fade-left"
+                  data-aos-delay="900"
+                  className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
+                ></div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <br />
         <br />
         <TracingBeamDemo />
         <br /> <br /> <br />
-        <p className=" title1 anton-regular  text-lime-50 text-center  mb-7  mt-10 uppercase ">
-          {" "}
-          My Recent Work.
-        </p>{" "}
-        <Card image={project} link="" />
-        <br /> <br /> <br />
-        <div className=" flex justify-center items-center flex-col">
-          <p className=" mb-3 p-2 md:p-4">
-            {" "}
-            <SplitText
-              text="Have a project in mind ? Let's build something amazing together! ✌️"
-              className=" text-xl sm:text-2xl text-gray-300  font-semibold text-center"
-              delay={50}
-              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-              easing="easeOutCubic"
-              threshold={0.2}
-              rootMargin="-50px"
-              // onLetterAnimationComplete={handleAnimationComplete}
-            />
-          </p>
-          <a href="mailto:alirazabt15342@gmail.com" className=" mb-2">
-            <SplitText
-              text="alirazabt15342@gmail.com"
-              className="md:text-5xl sm:text-3xl text-xl fw-bold underline text-lime-50  font-semibold text-center"
-              delay={50}
-              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-              easing="easeOutCubic"
-              threshold={0.2}
-              rootMargin="-50px"
-              // onLetterAnimationComplete={handleAnimationComplete}
-            />
-          </a>{" "}
-          <p className=" mb-2">
-            {" "}
-            <SplitText
-              text="+92 3152490017"
-              className="text-2xl text-gray-400  font-semibold text-center"
-              delay={50}
-              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-              easing="easeOutCubic"
-              threshold={0.2}
-              rootMargin="-50px"
-              // onLetterAnimationComplete={handleAnimationComplete}
-            />
-          </p>
-          {/* <Link to="/MyProjects"></Link> */}
-          <a
-            href="https://drive.google.com/file/d/1Rj1P4RQLiogkKuCGUOPB4MC5DxTohWKw/view"
-            target="_blank"
-            className="text-2xl text-blue-400  font-semibold text-center"
-            rel="noopener noreferrer"
-          >
-            <SplitText
-              text="  My Resume"
-              className="underline"
-              delay={50}
-              animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-              animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-              easing="easeOutCubic"
-              threshold={0.2}
-              rootMargin="-50px"
-              // onLetterAnimationComplete={handleAnimationComplete}
-            />
-          </a>
-        </div>
-        <br />
-        <br />
-        <br />
+        {/* <div className=" text-center ">
+          <Squares
+            speed={0.5}
+            squareSize={30}
+            direction="diagonal" // up, down, left, right, diagonal
+            borderColor="#3A83F9"
+            hoverFillColor="#222"
+          />
+        </div> */}
+        <br /> <br />
       </div>
-      <div></div> <br />
-      <br />
-      <br />
     </>
   );
 };

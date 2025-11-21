@@ -1,18 +1,14 @@
-import logo from "./logo.svg";
 import "./App.css";
 // import FloatingDock from "./Mycomponrnt";
-import { Card } from "./poitfolioCard/card";
-import { BackgroundBeamsDemo } from "./backgroundbeams";
-import { FloatingDockDemo } from "./FloatingDock";
-import { Home } from "./components/Home/Home";
-import { Mywork } from "./components/Mywork/Mywork";
-import TrueFocus from "./components/textanimation/TrueFocus ";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { MyProjects } from "./components/MyProjects/MyProjects";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Route, Routes } from "react-router-dom";
+import { FloatingDockDemo } from "./FloatingDock";
 import ScrollToTop from "./ScrollOnTop";
+import { BackgroundBeamsDemo } from "./backgroundbeams";
+import { Home } from "./components/Home/Home";
+import { MyProjects } from "./components/MyProjects/MyProjects";
 function App() {
   useEffect(() => {
     AOS.init({
@@ -23,7 +19,9 @@ function App() {
   return (
     <div className=" bg-black  ">
       <ScrollToTop />
+
       <FloatingDockDemo />
+
       <BackgroundBeamsDemo />
       <br />
 

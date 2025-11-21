@@ -18,3 +18,31 @@ code {
 .glowaround {
   /* filter: drop-shadow(0 0 6px rgba(101, 183, 237, 0.5)); */
 }
+.rotating-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.rotating-border::before {
+  content: "";
+  position: absolute;
+  inset: -4px;               /* Bigger than the box */
+  border-radius: 1rem;       /* Same radius as the div */
+  padding: 3px;
+  background: conic-gradient(
+    from 0deg,
+    transparent,
+    #38bdf8,
+    #0ea5e9,
+    #7dd3fc,
+    transparent
+  );
+  animation: rotate 3s linear infinite;
+  filter: blur(6px);
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}

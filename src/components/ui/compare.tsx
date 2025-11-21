@@ -1,9 +1,9 @@
 
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import { SparklesCore } from "../ui/sparkles.tsx";
-import { AnimatePresence, motion } from "motion/react";
-import { cn } from "../../lib/compare.ts";
 import { IconDotsVertical } from "@tabler/icons-react";
+import { AnimatePresence, motion } from "motion/react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
+import { cn } from "../../lib/compare.ts";
+import { SparklesCore } from "../ui/sparkles.tsx";
 
 export const Compare = ({
   firstImage = "",
@@ -179,7 +179,7 @@ export const Compare = ({
               transition={{ duration: 0 }}>
               <img
                 alt="first image"
-                src={firstImage}
+                src={require('../../images/git profile.png')}
                 className={cn(
                   "absolute inset-0  z-20 rounded-2xl shrink-0 w-full h-full select-none",
                   firstImageClassName
@@ -197,7 +197,8 @@ export const Compare = ({
               secondImageClassname
             )}
             alt="second image"
-            src={secondImage}
+            // src={secondImage}
+            src={firstImage}
             draggable={false} />
         ) : null}
       </AnimatePresence>
