@@ -1,6 +1,6 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
-import { motion, useTransform, useScroll, useSpring } from "motion/react";
+import { motion, useScroll, useSpring, useTransform } from "motion/react";
+import { useEffect, useRef, useState } from "react";
 import { cn } from "../../lib/sideLine.ts";
 
 export const TracingBeam = ({
@@ -35,7 +35,7 @@ export const TracingBeam = ({
     <motion.div
       ref={ref}
       className={cn("relative mx-auto h-full w-full max-w-4xl", className)}>
-      <div className="absolute top-3 -left-4 md:-left-20">
+      <div data-aos="zoom-in-right" data-aos-duration="1500" className="absolute top-3 -left-4 md:-left-20">
         <motion.div
           transition={{
             duration: 0.2,

@@ -26,7 +26,7 @@ const FloatingDockMobile = ({
 }) => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)}>
+    <div className={cn("relative hidden", className)}>
       <AnimatePresence>
         {open && (
           <motion.div
@@ -78,7 +78,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl !border-x-2  !border-sky-600 px-3 pb-3 md:flex bg-black   ", 
+        "mx-auto flex h-16 items-end gap-[1.6rem] rounded-2xl sm:!border-x-2  !border-sky-600 px-3 pb-[20px] sm:flex bg-black   ", 
         className
       )}>
       {items.map((item) => (
@@ -142,7 +142,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center !border-y-2 !border-yellow-400
+        className="relative flex aspect-square items-center justify-center 
 rounded-full bg-gradient-to-br 
 from-[rgba(190,59,246,0.3)] via-[rgba(37,99,235,0.2)] to-[rgba(142,41,236,0.3)]
 ">

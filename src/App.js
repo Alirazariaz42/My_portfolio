@@ -9,16 +9,18 @@ import ScrollToTop from "./ScrollOnTop";
 import { BackgroundBeamsDemo } from "./backgroundbeams";
 import { Home } from "./components/Home/Home";
 import { MyProjects } from "./components/MyProjects/MyProjects";
+import SplashCursor from "./components/SplashCursor/SplashCursor";
 function App() {
   useEffect(() => {
     AOS.init({
       duration: 1000, // animation duration in ms
-      once: true, // whether animation should happen only once
+      // once: true, // whether animation should happen only once
     });
   }, []);
   return (
     <div className=" bg-black  ">
       <ScrollToTop />
+      <SplashCursor />
 
       <FloatingDockDemo />
 

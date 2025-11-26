@@ -1,5 +1,6 @@
 import "./home.css";
 // import { AnimatedBorderCard } from "";
+import { Link } from "react-router-dom";
 import { TracingBeamDemo } from "../../trackingBeams";
 import TrueFocus from "../textanimation/TrueFocus ";
 import BlurText from "../textanimation/buildKeyframes";
@@ -11,62 +12,90 @@ export const Home = () => {
 
   return (
     <>
-      <div className=" container-lg p-lg-0">
+      <div className=" container-md p-lg-0 relative z-[51]">
         {" "}
-        <div className="  flex  justify-between  flex-wrap  mt-4   ">
-          <div className="  xl:w-1/2 ">
-            <p data-aos="fade-right" className=" title1_main anton-regular  ">
+        <div className="  flex  justify-between  flex-wrap  md:mt-8 md:min-h-screen  ">
+          <div className="  xl:w-1/2  lg:w-full p-3">
+            <p
+              data-aos="fade-right"
+              data-aos-delay="300"
+              data-aos-duration="1700"
+              className=" title1_main anton-regular  "
+            >
               {" "}
               MERN STACK
             </p>
             <p
               data-aos="fade-left"
-              data-aos-delay="300"
+              data-aos-delay="600"
+              data-aos-duration="1400"
               className=" title2 dancing-script  "
             >
               {" "}
               <i>DEVELOPER</i>
             </p>
-            <p
-              data-aos="fade-right"
-              data-aos-delay="500"
-              className=" intro-text anton-regular italic  relative z-[1]"
-            >
-              <span className=" fs-4  italic"> Hi! 👋 I'm .</span>
-              <TrueFocus
-                sentence="ALI RAZA"
-                manualMode={false}
-                blurAmount={5}
-                borderColor="#fc4c00"
-                animationDuration={0.5}
-                pauseBetweenAnimations={2}
-              />
+            <p className=" intro-text anton-regular italic  relative z-[1]">
+              <span
+                data-aos="fade-right"
+                data-aos-delay="800"
+                data-aos-duration="1800"
+                className=" md:text-xl sm:text-lg  italic inline-block"
+              >
+                {" "}
+                Hi! 👋 I'm .
+              </span>
               <br />
-              <span className=" ">
+              <span
+                data-aos="fade-left"
+                data-aos-delay="1000"
+                data-aos-duration="2000"
+              >
+                {" "}
+                <TrueFocus
+                  sentence="ALI RAZA"
+                  manualMode={false}
+                  blurAmount={5}
+                  borderColor="#fc4c00"
+                  animationDuration={0.5}
+                  pauseBetweenAnimations={2}
+                />
+              </span>
+              <br />
+              <span
+                className=" inline-block "
+                data-aos="zoom-in"
+                data-aos-delay="1200"
+                data-aos-duration="2000"
+              >
                 <BlurText
-                  text="Web Developer with 4+ years of experience in creating responsive, user-focused applications using React.js and the MERN stack. I specialize in building modern interfaces, scalable backend systems, and seamless digital experiences powered by clean code and strong problem-solving skills."
+                  text="Delivering clean, responsive, and high-performing web solutions using React.js and the MERN stack, ensuring optimized performance, maintainable architecture, and efficient client–server integration, while aligning every project with modern development standards and user-focused design principles."
                   delay={50}
                   animateBy="words"
                   direction="top"
                   onAnimationComplete={handleAnimationComplete}
-                  className="fs-5  italic mb-2 text-lime-50"
+                  className="md:text-xl sm:text-lg  italic mb-2 text-lime-50 "
                 />
               </span>
             </p>
 
-            <div className=" flex items-center relative z-[1]">
+            <div className=" flex items-center relative z-[1] mt-5">
               <span
                 data-aos="fade-right"
-                data-aos-delay="700"
-                className=" fs-3 italic  text-teal-50 me-3"
+                data-aos-delay="900"
+                data-aos-duration="1800"
+                className="  md:text-2xl sm:text-xl    text-teal-50 me-3"
               >
                 {" "}
                 Creative
               </span>
-              <div data-aos="fade-left" data-aos-delay="900">
+              <div
+                data-aos="fade-left"
+                data-aos-delay="1000"
+                data-aos-duration="2600"
+              >
                 <RotatingText
-                  texts={["Thinking!", "Coding!", "Ideas!", "Mind!"]}
-                  mainClassName="px-2 fw-bold fs-3 sm:px-2 md:px-3 bg-cyan-300  text-white outlined-text overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
+                  texts={["Mind!", "Thinking!", "Ideas!", "Coding!"]}
+                  mainClassName="px-2 fw-bold md:text-3xl sm:text-2xl  sm:px-2 md:px-3 bg-cyan-300  text-white outlined-text overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                   staggerFrom={"last"}
                   initial={{ y: "100%" }}
                   animate={{ y: 0 }}
@@ -74,374 +103,279 @@ export const Home = () => {
                   staggerDuration={0.025}
                   splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
                   transition={{ type: "spring", damping: 30, stiffness: 400 }}
-                  rotationInterval={2000}
+                  rotationInterval={1800}
                 />
               </div>
             </div>
           </div>
-          <div className="  xl:w-1/2 ">
-            <div className=" relative">
-              <img
-                src={require("../../images/Adobe Express - file.png")}
-                alt=""
-              />
+
+          <div className="  xl:w-1/3 xl:mt-5 w-full flex justify-center  relative">
+            <div className="   ">
+              {" "}
+              <div
+                data-aos="fade-up-left"
+                data-aos-delay="400"
+                data-aos-duration="1000"
+              >
+                {" "}
+                <a
+                  href="/resume.pdf"
+                  download
+                  target="_blank"
+                  className=" no-underline"
+                >
+                  <div
+                    className=" relative  sm:p-3 p-2  bg-gray-900/30  rounded-2xl !border-x-8   !border !border-blue-700/50  transform hover:scale-105
+    hover:bg-blue-900/20 transition-all duration-500 ease-in-out bg-gradient-to-br 
+from-[rgba(190,59,246,0.1)] via-[rgba(37,99,235,0.1)] to-[rgba(142,41,236,0.1)]  md:mb-4 mt-4 mb-2 "
+                  >
+                    <div className=" flex gap-4 align-center justify-center align-items-center">
+                      <div
+                        className="sm:p-2 p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60 small"
+                        style={{ transform: "none" }}
+                      >
+                        <svg
+                          width="36px"
+                          height="36px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            {" "}
+                            <path
+                              d="M17 17H17.01M17.4 14H18C18.9319 14 19.3978 14 19.7654 14.1522C20.2554 14.3552 20.6448 14.7446 20.8478 15.2346C21 15.6022 21 16.0681 21 17C21 17.9319 21 18.3978 20.8478 18.7654C20.6448 19.2554 20.2554 19.6448 19.7654 19.8478C19.3978 20 18.9319 20 18 20H6C5.06812 20 4.60218 20 4.23463 19.8478C3.74458 19.6448 3.35523 19.2554 3.15224 18.7654C3 18.3978 3 17.9319 3 17C3 16.0681 3 15.6022 3.15224 15.2346C3.35523 14.7446 3.74458 14.3552 4.23463 14.1522C4.60218 14 5.06812 14 6 14H6.6M12 15V4M12 15L9 12M12 15L15 12"
+                              stroke="#00AAFF"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>{" "}
+                          </g>
+                        </svg>
+                      </div>
+                      <p className=" title3 anton-regular text-lime-50 text-center    uppercase ">
+                        {" "}
+                        Download Resume
+                      </p>
+                    </div>
+                    <div
+                      data-aos="fade-left"
+                      data-aos-delay="900"
+                      className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
+                    ></div>
+                  </div>
+                </a>
+              </div>
+              <div
+                data-aos="fade-up-left"
+                data-aos-delay="800"
+                data-aos-duration="1500"
+              >
+                {" "}
+                <Link
+                  to="/MyProjects"
+                  href="mailto:alirazabt15342@gmail.com?subject=Hello&body=I%20want%20to%20contact%20you"
+                  className=" no-underline"
+                >
+                  <div
+                    className=" relative   sm:p-3 p-2 bg-gray-900/30  rounded-xl !border-x-8  !border !border-blue-700/50  transform hover:scale-105
+    hover:bg-blue-900/20 transition-all duration-500 ease-in-out bg-gradient-to-br 
+from-[rgba(190,59,246,0.1)] via-[rgba(37,99,235,0.1)] to-[rgba(142,41,236,0.1)] md:mt-4 md:mb-4 mt-2 mb-2 "
+                  >
+                    <div
+                      data-aos="fade-left"
+                      data-aos-delay="400"
+                      className=" flex gap-4 align-center justify-center align-items-center"
+                    >
+                      <div
+                        className="sm:p-2 p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60 small "
+                        style={{ transform: "none" }}
+                      >
+                        <svg
+                          version="1.1"
+                          id="Uploaded to svgrepo.com"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="36px"
+                          height="36px"
+                          viewBox="0 0 32 32"
+                          fill="#00AAFF"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            {" "}
+                            <path
+                              class="blueprint_een"
+                              d="M29,5H3v18h26V5z M28,22H4V6h24V22z M31.01,2H0.99C0.443,2,0,2.443,0,2.99v22.02 C0,25.557,0.443,26,0.99,26H11v2H9.99C9.443,28,9,28.443,9,28.99v0.02C9,29.557,9.443,30,9.99,30h12.02 c0.547,0,0.99-0.443,0.99-0.99v-0.02c0-0.547-0.443-0.99-0.99-0.99H21v-2h10.01c0.547,0,0.99-0.443,0.99-0.99V2.99 C32,2.443,31.557,2,31.01,2z M19,28h-6v-3h6V28z M30,24H2V4h28V24z M21,12H11v-1h10V12z M21,14H11v-1h10V14z M21,16H11v-1h10V16z M6,8H5V7h1V8z M8,8H7V7h1V8z"
+                            ></path>{" "}
+                          </g>
+                        </svg>
+                      </div>
+                      <p className=" title3 anton-regular text-lime-50 text-center   uppercase ">
+                        {" "}
+                        My Projects
+                      </p>
+                    </div>
+                    <div
+                      data-aos="fade-left"
+                      data-aos-delay="900"
+                      className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
+                    ></div>
+                  </div>
+                </Link>
+              </div>
+              <div
+                data-aos="fade-up-left"
+                data-aos-delay="1200"
+                data-aos-duration="2000"
+              >
+                {" "}
+                <a
+                  href="https://github.com/Alirazariaz42/"
+                  target="_blank"
+                  className=" no-underline"
+                >
+                  <div
+                    className=" relative  sm:p-3 p-2   bg-gray-900/30  rounded-2xl !border-x-8  !border !border-blue-700/50  transform hover:scale-105
+    hover:bg-blue-900/20 transition-all duration-500 ease-in-out bg-gradient-to-br 
+from-[rgba(190,59,246,0.1)] via-[rgba(37,99,235,0.1)] to-[rgba(142,41,236,0.1)] md:mt-4 md:mb-4 mt-2 mb-2 "
+                  >
+                    <div
+                      data-aos="fade-left"
+                      data-aos-delay="400"
+                      className=" flex gap-4 align-center justify-center align-items-center"
+                    >
+                      <div
+                        className="sm:p-2 p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60 small"
+                        style={{ transform: "none" }}
+                      >
+                        <svg
+                          width="36px"
+                          height="36px"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            {" "}
+                            <path
+                              d="M9.29183 21V18.4407L9.3255 16.6219C9.36595 16.0561 9.58639 15.5228 9.94907 15.11C9.95438 15.1039 9.95972 15.0979 9.9651 15.0919C9.9791 15.0763 9.96988 15.0511 9.94907 15.0485V15.0485C7.52554 14.746 5.0005 13.7227 5.0005 9.26749C4.9847 8.17021 5.3427 7.10648 6.00437 6.27215C6.02752 6.24297 6.05103 6.21406 6.07492 6.18545V6.18545C6.10601 6.1482 6.11618 6.09772 6.10194 6.05134C6.10107 6.04853 6.10021 6.04571 6.09935 6.04289C6.0832 5.9899 6.06804 5.93666 6.05388 5.88321C5.81065 4.96474 5.86295 3.98363 6.20527 3.09818C6.20779 3.09164 6.21034 3.08511 6.2129 3.07858C6.22568 3.04599 6.25251 3.02108 6.28698 3.01493V3.01493C6.50189 2.97661 7.37036 2.92534 9.03298 4.07346C9.08473 4.10919 9.13724 4.14609 9.19053 4.18418V4.18418C9.22901 4.21168 9.27794 4.22011 9.32344 4.20716C9.32487 4.20675 9.32631 4.20634 9.32774 4.20593C9.41699 4.18056 9.50648 4.15649 9.59617 4.1337C11.1766 3.73226 12.8234 3.73226 14.4038 4.1337C14.4889 4.1553 14.5737 4.17807 14.6584 4.20199C14.6602 4.20252 14.6621 4.20304 14.6639 4.20356C14.7174 4.21872 14.7749 4.20882 14.8202 4.17653V4.17653C14.8698 4.14114 14.9187 4.10679 14.967 4.07346C16.6257 2.92776 17.4894 2.9764 17.7053 3.01469V3.01469C17.7404 3.02092 17.7678 3.04628 17.781 3.07946C17.7827 3.08373 17.7843 3.08799 17.786 3.09226C18.1341 3.97811 18.1894 4.96214 17.946 5.88321C17.9315 5.93811 17.9159 5.9928 17.8993 6.04723V6.04723C17.8843 6.09618 17.8951 6.14942 17.9278 6.18875C17.9289 6.18998 17.9299 6.19121 17.9309 6.19245C17.9528 6.21877 17.9744 6.24534 17.9956 6.27215C18.6573 7.10648 19.0153 8.17021 18.9995 9.26749C18.9995 13.747 16.4565 14.7435 14.0214 15.015V15.015C14.0073 15.0165 14.001 15.0334 14.0105 15.0439C14.0141 15.0479 14.0178 15.0519 14.0214 15.0559C14.2671 15.3296 14.4577 15.6544 14.5811 16.0103C14.7101 16.3824 14.7626 16.7797 14.7351 17.1754V21"
+                              stroke="#00AAFF"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>{" "}
+                            <path
+                              d="M4 17C4.36915 17.0523 4.72159 17.1883 5.03065 17.3975C5.3397 17.6068 5.59726 17.8838 5.7838 18.2078C5.94231 18.4962 6.15601 18.7504 6.41264 18.9557C6.66927 19.161 6.96379 19.3135 7.27929 19.4043C7.59478 19.4952 7.92504 19.5226 8.25112 19.485C8.5772 19.4475 8.89268 19.3457 9.17946 19.1855"
+                              stroke="#00AAFF"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            ></path>{" "}
+                          </g>
+                        </svg>
+                      </div>
+                      <p className=" title3 anton-regular text-lime-50 text-center   uppercase ">
+                        {" "}
+                        gitHub
+                      </p>
+                    </div>
+                    <div
+                      data-aos="fade-left"
+                      data-aos-delay="900"
+                      className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
+                    ></div>
+                  </div>
+                </a>
+              </div>
+              <div
+                data-aos="fade-up-left"
+                data-aos-delay="1600"
+                data-aos-duration="2500"
+              >
+                {" "}
+                <a
+                  href="https://www.linkedin.com/in/ali-raza-mern-stack/"
+                  target="_blank"
+                  className=" no-underline"
+                >
+                  <div
+                    className=" relative    sm:p-3 p-2 md:min-w-[500px] bg-gray-900/30  rounded-2xl  !border-x-8  !border !border-blue-700/50  transform hover:scale-105
+    hover:bg-blue-900/20 transition-all duration-200 ease-in-out bg-gradient-to-br 
+from-[rgba(190,59,246,0.1)] via-[rgba(37,99,235,0.1)] to-[rgba(142,41,236,0.1)] md:mt-4 md:mb-4 mt-2 mb-2 "
+                  >
+                    <div className=" flex gap-4 align-center justify-center align-items-center">
+                      <div
+                        className="sm:p-2 p-1  bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60 small"
+                        style={{ transform: "none" }}
+                      >
+                        <svg
+                          fill="#00AAFF"
+                          version="1.1"
+                          id="Layer_1"
+                          viewBox="-143 145 512 512"
+                          width="36px"
+                          height="36px"
+                        >
+                          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                          <g
+                            id="SVGRepo_tracerCarrier"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></g>
+                          <g id="SVGRepo_iconCarrier">
+                            {" "}
+                            <g>
+                              {" "}
+                              <path d="M-143,145v512h512V145H-143z M339,627h-452V175h452V627z"></path>{" "}
+                              <rect
+                                x="-8.5"
+                                y="348.4"
+                                width="49.9"
+                                height="159.7"
+                              ></rect>{" "}
+                              <path d="M127.9,508.1v-86.3c0-4.9-0.2-9.7,1.2-13.1c3.8-9.6,12.1-19.6,27-19.6c19.5,0,28.3,14.8,28.3,36.4v82.6H241v-88.8 c0-49.4-27.8-72.4-63.3-72.4c-28.6,0-46.5,15.6-49.8,26.6v-25.1H71.8c0.7,13.3,0,159.7,0,159.7H127.9z"></path>{" "}
+                              <path d="M14.7,328.4h0.4c18.8,0,30.5-12.3,30.4-27.7C45.1,284.9,33.8,273,15.4,273c-18.4,0-30.5,11.9-30.5,27.7 C-15.1,316.2-3.4,328.4,14.7,328.4z"></path>{" "}
+                            </g>{" "}
+                          </g>
+                        </svg>
+                      </div>
+                      <p className=" title3 anton-regular text-lime-50 text-center   uppercase ">
+                        {" "}
+                        LinkedIn
+                      </p>
+                    </div>
+                    <div
+                      data-aos="fade-left"
+                      data-aos-delay="900"
+                      className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
+                    ></div>
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div>
+        </div>{" "}
+        <div className=" ">
           {" "}
-          <div data-aos="fade-left" data-aos-delay="800">
-            {" "}
-            <a
-              href="https://wa.me/923152490017?text=Hi%20I%20want%20to%20talk%20about%20a%20project"
-              target="_blank"
-              className=" no-underline"
-            >
-              <div
-                className=" relative  md:p-3 sm:p-2 bg-gray-900/30  rounded-2xl  !border !border-blue-700/50  transform hover:scale-105
-    hover:bg-blue-900/20 transition-all duration-500 ease-in-out"
-              >
-                <div
-                  data-aos="fade-left"
-                  data-aos-delay="400"
-                  className=" flex gap-4 align-center justify-center align-items-center"
-                >
-                  <div
-                    className="p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60"
-                    style={{ transform: "none" }}
-                  >
-                    <svg
-                      width="36px"
-                      height="36px"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
-                          fill="#BFC8D0"
-                        ></path>{" "}
-                        <path
-                          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
-                          fill="url(#paint0_linear_87_7264)"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
-                          fill="white"
-                        ></path>{" "}
-                        <path
-                          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
-                          fill="white"
-                        ></path>{" "}
-                        <defs>
-                          {" "}
-                          <linearGradient
-                            id="paint0_linear_87_7264"
-                            x1="26.5"
-                            y1="7"
-                            x2="4"
-                            y2="28"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            {" "}
-                            <stop stop-color="#5BD066"></stop>{" "}
-                            <stop offset="1" stop-color="#27B43E"></stop>{" "}
-                          </linearGradient>{" "}
-                        </defs>{" "}
-                      </g>
-                    </svg>
-                  </div>
-                  <p className=" title3 anton-regular text-lime-50 text-center  mb-7  uppercase ">
-                    {" "}
-                    Download Resume
-                  </p>
-                </div>
-                <div
-                  data-aos="fade-left"
-                  data-aos-delay="900"
-                  className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
-                ></div>
-              </div>
-            </a>
-          </div>
-          <br />
-          <div data-aos="fade-left" data-aos-delay="1600">
-            {" "}
-            <a
-              href="https://wa.me/923152490017?text=Hi%20I%20want%20to%20talk%20about%20a%20project"
-              target="_blank"
-              className=" no-underline"
-            >
-              <div
-                className=" relative  md:p-3 sm:p-2 bg-gray-900/30  rounded-2xl  !border !border-blue-700/50  transform hover:scale-105
-    hover:bg-blue-900/20 transition-all duration-500 ease-in-out"
-              >
-                <div
-                  data-aos="fade-left"
-                  data-aos-delay="400"
-                  className=" flex gap-4 align-center justify-center align-items-center"
-                >
-                  <div
-                    className="p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60"
-                    style={{ transform: "none" }}
-                  >
-                    <svg
-                      width="36px"
-                      height="36px"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
-                          fill="#BFC8D0"
-                        ></path>{" "}
-                        <path
-                          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
-                          fill="url(#paint0_linear_87_7264)"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
-                          fill="white"
-                        ></path>{" "}
-                        <path
-                          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
-                          fill="white"
-                        ></path>{" "}
-                        <defs>
-                          {" "}
-                          <linearGradient
-                            id="paint0_linear_87_7264"
-                            x1="26.5"
-                            y1="7"
-                            x2="4"
-                            y2="28"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            {" "}
-                            <stop stop-color="#5BD066"></stop>{" "}
-                            <stop offset="1" stop-color="#27B43E"></stop>{" "}
-                          </linearGradient>{" "}
-                        </defs>{" "}
-                      </g>
-                    </svg>
-                  </div>
-                  <p className=" title3 anton-regular text-lime-50 text-center  mb-7  uppercase ">
-                    {" "}
-                    +923152490017
-                  </p>
-                </div>
-                <div
-                  data-aos="fade-left"
-                  data-aos-delay="900"
-                  className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
-                ></div>
-              </div>
-            </a>
-          </div>
-          <br />
-          <div data-aos="fade-left" data-aos-delay="2400">
-            {" "}
-            <a
-              href="https://wa.me/923152490017?text=Hi%20I%20want%20to%20talk%20about%20a%20project"
-              target="_blank"
-              className=" no-underline"
-            >
-              <div
-                className=" relative  md:p-3 sm:p-2 bg-gray-900/30  rounded-2xl  !border !border-blue-700/50  transform hover:scale-105
-    hover:bg-blue-900/20 transition-all duration-500 ease-in-out"
-              >
-                <div
-                  data-aos="fade-left"
-                  data-aos-delay="400"
-                  className=" flex gap-4 align-center justify-center align-items-center"
-                >
-                  <div
-                    className="p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60"
-                    style={{ transform: "none" }}
-                  >
-                    <svg
-                      width="36px"
-                      height="36px"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
-                          fill="#BFC8D0"
-                        ></path>{" "}
-                        <path
-                          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
-                          fill="url(#paint0_linear_87_7264)"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
-                          fill="white"
-                        ></path>{" "}
-                        <path
-                          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
-                          fill="white"
-                        ></path>{" "}
-                        <defs>
-                          {" "}
-                          <linearGradient
-                            id="paint0_linear_87_7264"
-                            x1="26.5"
-                            y1="7"
-                            x2="4"
-                            y2="28"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            {" "}
-                            <stop stop-color="#5BD066"></stop>{" "}
-                            <stop offset="1" stop-color="#27B43E"></stop>{" "}
-                          </linearGradient>{" "}
-                        </defs>{" "}
-                      </g>
-                    </svg>
-                  </div>
-                  <p className=" title3 anton-regular text-lime-50 text-center  mb-7  uppercase ">
-                    {" "}
-                    +923152490017
-                  </p>
-                </div>
-                <div
-                  data-aos="fade-left"
-                  data-aos-delay="900"
-                  className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
-                ></div>
-              </div>
-            </a>
-          </div>
-          <br />
-          <div data-aos="fade-left" data-aos-delay="3000">
-            {" "}
-            <a
-              href="https://wa.me/923152490017?text=Hi%20I%20want%20to%20talk%20about%20a%20project"
-              target="_blank"
-              className=" no-underline"
-            >
-              <div
-                className=" relative  md:p-3 sm:p-2 bg-gray-900/30  rounded-2xl  !border !border-blue-700/50  transform hover:scale-105
-    hover:bg-blue-900/20 transition-all duration-500 ease-in-out"
-              >
-                <div
-                  data-aos="fade-left"
-                  data-aos-delay="400"
-                  className=" flex gap-4 align-center justify-center align-items-center"
-                >
-                  <div
-                    className="p-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-xl !border !border !border-yellow-400/60"
-                    style={{ transform: "none" }}
-                  >
-                    <svg
-                      width="36px"
-                      height="36px"
-                      viewBox="0 0 32 32"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                      <g
-                        id="SVGRepo_tracerCarrier"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      ></g>
-                      <g id="SVGRepo_iconCarrier">
-                        {" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
-                          fill="#BFC8D0"
-                        ></path>{" "}
-                        <path
-                          d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4 18.5589 4 16C4 9.37258 9.37258 4 16 4C22.6274 4 28 9.37258 28 16Z"
-                          fill="url(#paint0_linear_87_7264)"
-                        ></path>{" "}
-                        <path
-                          fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
-                          fill="white"
-                        ></path>{" "}
-                        <path
-                          d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
-                          fill="white"
-                        ></path>{" "}
-                        <defs>
-                          {" "}
-                          <linearGradient
-                            id="paint0_linear_87_7264"
-                            x1="26.5"
-                            y1="7"
-                            x2="4"
-                            y2="28"
-                            gradientUnits="userSpaceOnUse"
-                          >
-                            {" "}
-                            <stop stop-color="#5BD066"></stop>{" "}
-                            <stop offset="1" stop-color="#27B43E"></stop>{" "}
-                          </linearGradient>{" "}
-                        </defs>{" "}
-                      </g>
-                    </svg>
-                  </div>
-                  <p className=" title3 anton-regular text-lime-50 text-center  mb-7  uppercase ">
-                    {" "}
-                    +923152490017
-                  </p>
-                </div>
-                <div
-                  data-aos="fade-left"
-                  data-aos-delay="900"
-                  className="h-[2px]  flex mx-auto  bg-gradient-to-r from-transparent via-blue-600 to-transparent mt-2"
-                ></div>
-              </div>
-            </a>
-          </div>
+          <TracingBeamDemo />
         </div>
-        <br />
-        <br />
-        <TracingBeamDemo />
-        <br /> <br /> <br />
         {/* <div className=" text-center ">
           <Squares
             speed={0.5}

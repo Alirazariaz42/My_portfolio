@@ -30,17 +30,11 @@ export function FloatingDockDemo() {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-sky-500" />
       ),
-      href: "https://www.linkedin.com/in/ali-raza-react-js/",
+      href: "https://www.linkedin.com/in/ali-raza-mern-stack/",
     },
     {
       title: "Resume",
       icon: (
-        // <img
-        //   src={require("./images/resumeicon.png")}
-        //   width={60}
-        //   height={60}
-        //   alt="Resume Logo"
-        // />
         <IconFileText className="h-full w-full text-neutral-500 dark:text-sky-500" />
       ),
       href: "/resume.pdf",
@@ -73,8 +67,7 @@ export function FloatingDockDemo() {
       {" "}
       <div
         data-aos="fade-up"
-        data-aos-delay="100"
-        className="flex items-center justify-center fixed z-[201] bottom-5  w-full "
+        className="sm:flex hidden items-center justify-center fixed z-[201] sm:bottom-5 bottom-[0px]   w-full "
       >
         <FloatingDock
           // only for demo, remove for production
@@ -84,8 +77,7 @@ export function FloatingDockDemo() {
       </div>
       <div
         data-aos="fade-up"
-        data-aos-delay="900"
-        className="flex items-center justify-center fixed z-[200] bottom-[24px]   w-full"
+        className="sm:flex items-center justify-center fixed z-[200] sm:bottom-[22px] bottom-[0px] hidden w-full"
       >
         <Squares
           speed={0.8}

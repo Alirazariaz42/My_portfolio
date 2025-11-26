@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@react-spring/web": "^10.0.1",
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.0",
     "@tabler/icons-react": "^3.31.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
@@ -24,6 +26,7 @@
     "react-router-dom": "^7.6.1",
     "react-scripts": "5.0.1",
     "tailwind-merge": "^3.3.0",
+    "three": "^0.181.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
