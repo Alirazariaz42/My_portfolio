@@ -376,15 +376,7 @@ from-[rgba(190,59,246,0.1)] via-[rgba(37,99,235,0.1)] to-[rgba(142,41,236,0.1)] 
           {" "}
           <TracingBeamDemo />
         </div>
-        {/* <div className=" text-center ">
-          <Squares
-            speed={0.5}
-            squareSize={30}
-            direction="diagonal" // up, down, left, right, diagonal
-            borderColor="#3A83F9"
-            hoverFillColor="#222"
-          />
-        </div> */}
+        
         <br /> <br />
       </div>
     </>
